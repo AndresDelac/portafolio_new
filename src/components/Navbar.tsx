@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <span className="font-display text-xl">Portfolio</span>
+          <span className="font-display text-2xl">Portfolio</span>
           
           {/* Desktop Menu */}
           <div className="hidden md:block">
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+                  className="text-gray-700 hover:text-gray-900 px-3 py-2 text-lg font-medium transition-colors"
                 >
                   {item.name}
                 </a>

@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import ProjectDetail from '../components/ProjectDetail';
 import { useState } from 'react';
+import Footer from '@/components/footer';
 // import Image from 'next/image';
 
 const projects = [
@@ -17,38 +18,49 @@ const projects = [
     id: 2,
     title: "Chat en tiempo real",
     description: "Aplicación para gestionar tareas y proyectos con características de colaboración en tiempo real.",
-    technologies: ["React", "Firebase", "Material-UI"],
-    image: '/images/ecomerce_prueba.png',
+    technologies: ["React", "Firebase", "Javasrcript"],
+    image: '/images/image-chat.png',
     video: "/videos/video chat-react.mkv"
   },
   {
     id: 3,
-    title: "Dashboard Analítico",
+    title: "Catalogo de desayunos",
     description: "Panel de control interactivo para visualizar datos empresariales y métricas clave.",
     technologies: ["React", "D3.js", "Node.js"],
-    video: "/videos/Dashboard-analitico.mkv"
+    image: '/images/desayunos_image.jpg',
+    video: "/videos/Desayunos-app.mkv"
   },
   {
     id: 4,
     title: "Buscador de gif",
     description: "Plataforma social con funciones de publicación, comentarios y mensajería en tiempo real.",
     technologies: ["React", "Socket.io", "MongoDB"],
-    video: "https://example.com/videos/social-demo.mp4"
+    image: '/images/Gif-search.gif',
+    video: "/videos/gif-search.mp4.mkv"
   },
   {
     id: 5,
     title: "App de Clima",
     description: "Aplicación del clima con pronósticos detallados y alertas meteorológicas.",
     technologies: ["React", "OpenWeather API", "TypeScript"],
+    image: '/images/App-clima.png',
     video: "https://example.com/videos/weather-demo.mp4"
   },
   {
     id: 6,
-    title: "Portfolio Personal",
-    description: "Sitio web personal responsive con diseño moderno y animaciones suaves.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    video: "https://example.com/videos/portfolio-demo.mp4"
+    title: "Dashboard Analítico",
+    description: "Panel de control interactivo para visualizar datos empresariales y métricas clave.",
+    technologies: ["React", "D3.js", "Node.js"],
+    image: '/images/analisis.jpg',
+    video: "/videos/Dashboard-analitico.mkv"
   }
+];
+
+const technologies = [
+  { name: "JavaScript", image: "/images/javascript.png" },
+  { name: "React", image: "/images/react-logo.jpg" },
+  { name: "Tailwind CSS", image: "/images/tailwind-logo.png" },
+  { name: "Next.js", image: "/images/nextjs-logo.jpg" },
 ];
 
 const Index = () => {
@@ -61,7 +73,7 @@ const Index = () => {
       
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Introduccionn */}
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-display mb-6">
@@ -97,10 +109,10 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 mt-8 md:mt-0">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                    src="/images/foto sin fondo.jpg" 
                     alt="Desarrollador Frontend"
                     className="w-full h-full object-cover"
                   />
@@ -135,16 +147,21 @@ const Index = () => {
 
       {/* Technologies Section */}
       <section id="technologies" className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-display mb-8 text-center">Tecnologías</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {['JavaScript', 'React', 'Tailwind CSS', 'Next.js'].map((tech) => (
-              <div key={tech} className="bg-white/40 backdrop-blur-sm rounded-lg p-6 text-center shadow-lg">
-                <span className="text-lg font-medium">{tech}</span>
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl font-display mb-8 text-center">Tecnologías</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {technologies.map((tech) => (
+                  <div key={tech.name} className="bg-white/40 backdrop-blur-sm rounded-lg p-2 text-center shadow-lg flex flex-col items-center">
+                    <img src={tech.image} alt={tech.name} className="w-full h-full object-cover" />
+                    <span className="text-lg font-medium">{tech.name}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+      </section>
+      
+      <section>
+      <Footer />
       </section>
 
       {selectedProject && (
