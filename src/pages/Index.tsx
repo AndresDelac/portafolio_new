@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import ProjectDetail from '../components/ProjectDetail';
 import { useState } from 'react';
-import Footer from '@/components/footer';
+import Footer from '../components/Footer';
 // import Image from 'next/image';
 
 const projects = [
