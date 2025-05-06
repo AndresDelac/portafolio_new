@@ -5,14 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-white/80 backdrop-blur-md z-50 shadow-sm py-8 px-4 md:px-8">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* <div>
-            <h3 className="text-2xl font-semibold mb-4">Desayunos Deliciosos</h3>
-            <p className="text-gray-700">
-              Hacemos tus mañanas especiales con desayunos preparados con amor.
-            </p>
-          </div> */}
-          
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">        
           <div>
             <h3 className="text-2xl font-semibold mb-4">Contacto</h3>
             <div className="flex items-center mb-3">
