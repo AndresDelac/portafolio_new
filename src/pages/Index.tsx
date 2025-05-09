@@ -16,11 +16,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "Chat en tiempo real",
-    description: "Aplicación para gestionar tareas y proyectos con características de colaboración en tiempo real.",
+    title: "Agencia de viajes",
+    description: "Aplicación para ver opciones de viaje, destinos y actividades",
     technologies: ["React", "Firebase", "Javasrcript"],
-    image: '/images/image-chat.png',
-    video: "/videos/video chat-react.mkv"
+    image: '/images/agencia.jpg',
+    video: "/videos/Bahamas-video.mkv"
   },
   {
     id: 3,
@@ -33,18 +33,18 @@ const projects = [
   {
     id: 4,
     title: "Buscador de gif",
-    description: "Plataforma social con funciones de publicación, comentarios y mensajería en tiempo real.",
+    description: "Permite la busqueda de imagenes con movimiento",
     technologies: ["React", "Socket.io", "MongoDB"],
     image: '/images/Gif-search.gif',
     video: "/videos/gif-search.mp4.mkv"
   },
   {
     id: 5,
-    title: "App de Clima",
-    description: "Aplicación del clima con pronósticos detallados y alertas meteorológicas.",
-    technologies: ["React", "OpenWeather API", "TypeScript"],
-    image: '/images/App-clima.png',
-    video: "https://example.com/videos/weather-demo.mp4"
+    title: "Turnos para fisioterapia",
+    description: "Aplicación que gestiona turnos para un consultorio de fisioterapia",
+    technologies: ["React", "Redux", "TypeScript"],
+    image: '/images/fisio.jpg',
+    video: "/videos/Fisio-video.mkv"
   },
   {
     id: 6,
